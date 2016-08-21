@@ -1,0 +1,145 @@
+/*
+The CSS code gets to executed from top to bottom and left ro right
+Basic rules to write CSS
+- write GENERAL rules first (for all the paragraph tags in the website for example) and only after that write CSS for SPECIFIC tags (for example the paragraph tags inside the footer)
+- write the css styles to define for the parent (outside) container and THEN the children (inside containers) of that parent and THEN the children (inside containers) of the child above
+*/
+
+
+/* -------------------------------------
+CSS reset
+(all the browsers will see the website in the same by setting every tag to 0 (the website will look the same on all browsers))
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+
+/* -------------------------------------
+General styles (General Module, wrapping around the modules bellow)
+(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
+*/
+
+html {
+    background: rgba(0, 0, 0, 0) url("../images/pirate-bar.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    color: white;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+
+/* -------------------------------------
+Header styles (Main Module)
+(all the styles inside the < header > or < nav > tags)
+*/
+
+
+/* -------------------------------------
+Content styles (Main Module)
+(all the styles inside the < sections > or < aside > tags)
+*/
+
+main,
+header,
+section {
+    width: 40%;
+    margin: 0 auto;
+    background-image: url("../images/transparent.jpg");
+    border-radius: 0.5rem;
+    padding: 15px;
+}
+
+header,
+section {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.formGroup,
+li {
+    display: block;
+    margin: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.formGroup:last-child,
+li:last-child {
+    border: none;
+}
+
+label,
+select {
+    display: inline-block;
+}
+
+label {
+    width: 80%;
+}
+
+select {
+    float: right;
+}
+
+button {
+    background-color: lightgray;
+    border-color: darkgray;
+    border-radius: 4px;
+    border-style: none;
+    color: gray;
+    font-size: 1.125rem;
+    padding: 0.5rem;
+    text-shadow: none;
+    width: 50%;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.button,
+.output {
+    text-align: center;
+}
+
+
+/* -------------------------------------
+Footer styles (Main Module)
+(all the styles inside the < footer > tag)
+*/
+
+
+/* -------------------------------------
+place all the desktop styles above this line
+Responsive styles
+(the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
+place all the mobile tables styles bellow this line
+*/
